@@ -1,0 +1,11 @@
+Please find the attached Syllabus (OOP in Java) and schedule for the lectures and practical. 
+Feel free to suggest how we should use the available time to give the best to students covering theoretical concepts 
+in a way that they can be easily absorbed to the industry.
+
+Please note that this is a first year second semester module. 
+Students have learned C++ in their first semester and learning Database and Data Structures in this semester.
+
+We have 2 hours * 14 weeks for lectures.
+We have 3 hours* 12 weeks for practical
+
+Your inputs are very much appreciated. Feel free to add anything important to the contents and recommend any good reference as well.
