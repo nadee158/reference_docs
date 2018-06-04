@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">HelloWorld</string>
+    <string name="hint_edit_text_contact_number">Contact Number</string>
+</resources>
