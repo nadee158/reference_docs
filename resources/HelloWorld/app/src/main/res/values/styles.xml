@@ -8,4 +8,9 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="custom_button_font">
+        <item name="android:textSize">12pt</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
 </resources>
