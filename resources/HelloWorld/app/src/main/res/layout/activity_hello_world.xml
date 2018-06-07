@@ -4,57 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="5dp"
     tools:context=".HelloWorldActivity">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
-
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name" />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
+        android:id="@+id/textViewContactNumber"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="65dp"
-        android:orientation="horizontal">
+        android:layout_marginTop="19dp"
+        android:text="TextView" />
 
-        <RadioGroup
-            android:layout_width="298dp"
-            android:layout_height="match_parent" />
+    <TextView
+        android:id="@+id/textViewMessage"
+        android:layout_width="224dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textViewContactNumber"
+        android:layout_toEndOf="@+id/textViewContactNumber"
+        android:layout_toRightOf="@+id/textViewContactNumber"
+        android:text="TextView" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
-
-            <Switch
-                android:id="@+id/switch1"
-                android:layout_width="98dp"
-                android:layout_height="wrap_content"
-                android:text="Switch" />
-
-            <Button
-                android:id="@+id/button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Button" />
-        </RelativeLayout>
-    </LinearLayout>
 </RelativeLayout>

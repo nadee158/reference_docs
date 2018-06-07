@@ -2,6 +2,7 @@ package lk.uok.mit.activity;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.text.Editable;
@@ -9,8 +10,8 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
+import lk.uok.mit.helloworld.HelloWorldActivity;
 import lk.uok.mit.helloworld.R;
 
 public class SendMessageActivity extends Activity {
@@ -79,15 +80,24 @@ public class SendMessageActivity extends Activity {
         buttonSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //define the text to be displayed in toast
-                String text = "Send button was clicked!";
-                //define the duration to which the toast should be displayed || Values are LENGTH_LONG/LENGTH_SHORT
-                int duration = Toast.LENGTH_SHORT;
-                //initialize the toast using makeText method
-                Toast toast = Toast.makeText(context, text, duration);
-                //show the toast
-                toast.show();
+                //get the java reference to Contact Number Text box
+                EditText editTextContactNumber = findViewById(R.id.editTextContactNumber);
+                //get the current text from Contact Number text box
+                String contactNumberText = editTextContactNumber.getText().toString();
 
+                //get the java reference to Message Text box
+                EditText editTextMessage = findViewById(R.id.editTextMessage);
+                //get the current text from Message text box
+                String messageText = editTextMessage.getText().toString();
+
+                //create a new Intent by passing the context of the current Activity
+                // and the class of the Next Activity we need to start as parameters
+                Intent intent = new Intent(context, HelloWorldActivity.class);
+                //add the data to be passed to the next Activity using putExtra method of the intent
+                intent.putExtra("CONTACT_NUMBER", contactNumberText);
+                intent.putExtra("MESSAGE", messageText);
+                //using inherited startActivity method of the Activity class, start the HelloWorldActivity
+                startActivity(intent);
             }
         });
 
